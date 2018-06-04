@@ -13,11 +13,11 @@ The tidy_data.txt file is the output of the run_analysis.R script. The tidy data
 - measurement
 - mean
 
-### Subjects
+### subject.id
 
 Unique numeric identifier (1-30) for each subject in the experiment.
 
-### Activity
+### activity
 
 Experiment activity performed by subjects:
 
@@ -28,7 +28,7 @@ Experiment activity performed by subjects:
 - WALKING_DOWNSTAIRS
 - WALKING_UPSTAIRS
 
-### Measurement
+### measurement
 
 Accelerometer measurements. See [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) code book for an explanation of these different variables.
 
@@ -112,6 +112,6 @@ Accelerometer measurements. See [Human Activity Recognition Using Smartphones Da
 - tGravityAccMag-mean()
 - tGravityAccMag-std()
 
-### Mean
+### mean
 
 Mean of measurement values.
