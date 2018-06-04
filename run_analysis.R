@@ -90,6 +90,6 @@ data.tidy <- group_by(data.mean.std, subject.id, activity) %>%
   gather(measurement, mean, -activity, -subject.id) %>%
   arrange(subject.id, activity, measurement)
 
-write_csv(data.tidy, "tidy_data.txt")
+write.table(data.tidy, "tidy_data.txt", row.name=FALSE)
 
 rm(list = ls())
