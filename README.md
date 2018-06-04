@@ -1,6 +1,6 @@
 # Course Project: Getting and Cleaning Data
 
-This project was completed for the Coursera and Johns Hopkins University course “Getting and Cleaning Data”, part of the Data Science Specialization track. The purpose of this project is to demonstrate the ability to collect, work with, and clean a data set.
+This project was completed for the Coursera and Johns Hopkins University course “Getting and Cleaning Data”, part of the [Data Science Specialization](https://www.coursera.org/specializations/jhu-data-science). The purpose of this project is to demonstrate the ability to collect, work with, and clean a data set.
 
 The data for this project come from the [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
