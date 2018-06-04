@@ -87,7 +87,8 @@ for (i in 1:nrow(data.mean.std)) {
 
 data.tidy <- group_by(data.mean.std, subject.id, activity) %>%
   summarise_all(funs(mean)) %>%
-  gather(measurement, mean, -activity, -subject.id)
+  gather(measurement, mean, -activity, -subject.id) %>%
+  arrange(subject.id, activity, measurement)
 
 write_csv(data.tidy, "tidy_data.txt")
 
