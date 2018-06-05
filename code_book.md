@@ -6,12 +6,7 @@ The data come from the [Human Activity Recognition Using Smartphones Data Set](h
 
 ## Output Data
 
-The tidy_data.txt file is the output of the run_analysis.R script. The tidy data contain 14,220 observations, comprising 30 subjects, 6 activities per subject, 79 measurements per activity, and the average measurement of each activity.
-
-- subject.id
-- activity
-- measurement
-- mean
+The tidy_data.txt file is the output of the run_analysis.R script. The data contain a total of 180 observations with 88 variables.
 
 ### subject.id
 
@@ -28,90 +23,93 @@ Experiment activity performed by subjects:
 - WALKING_DOWNSTAIRS
 - WALKING_UPSTAIRS
 
-### measurement
+### measurement variables (columns 3–88)
 
-Accelerometer measurements. See [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) code book for an explanation of these different variables.
+Mean accelerometer measurements. See [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) code book for an explanation of these different variables.
 
-- fBodyAcc-mean()-X
-- fBodyAcc-mean()-Y
-- fBodyAcc-mean()-Z
-- fBodyAcc-meanFreq()-X
-- fBodyAcc-meanFreq()-Y
-- fBodyAcc-meanFreq()-Z
-- fBodyAcc-std()-X
-- fBodyAcc-std()-Y
-- fBodyAcc-std()-Z
-- fBodyAccJerk-mean()-X
-- fBodyAccJerk-mean()-Y
-- fBodyAccJerk-mean()-Z
-- fBodyAccJerk-meanFreq()-X
-- fBodyAccJerk-meanFreq()-Y
-- fBodyAccJerk-meanFreq()-Z
-- fBodyAccJerk-std()-X
-- fBodyAccJerk-std()-Y
-- fBodyAccJerk-std()-Z
-- fBodyAccMag-mean()
-- fBodyAccMag-meanFreq()
-- fBodyAccMag-std()
-- fBodyBodyAccJerkMag-mean()
-- fBodyBodyAccJerkMag-meanFreq()
-- fBodyBodyAccJerkMag-std()
-- fBodyBodyGyroJerkMag-mean()
-- fBodyBodyGyroJerkMag-meanFreq()
-- fBodyBodyGyroJerkMag-std()
-- fBodyBodyGyroMag-mean()
-- fBodyBodyGyroMag-meanFreq()
-- fBodyBodyGyroMag-std()
-- fBodyGyro-mean()-X
-- fBodyGyro-mean()-Y
-- fBodyGyro-mean()-Z
-- fBodyGyro-meanFreq()-X
-- fBodyGyro-meanFreq()-Y
-- fBodyGyro-meanFreq()-Z
-- fBodyGyro-std()-X
-- fBodyGyro-std()-Y
-- fBodyGyro-std()-Z
-- tBodyAcc-mean()-X
-- tBodyAcc-mean()-Y
-- tBodyAcc-mean()-Z
-- tBodyAcc-std()-X
-- tBodyAcc-std()-Y
-- tBodyAcc-std()-Z
-- tBodyAccJerk-mean()-X
-- tBodyAccJerk-mean()-Y
-- tBodyAccJerk-mean()-Z
-- tBodyAccJerk-std()-X
-- tBodyAccJerk-std()-Y
-- tBodyAccJerk-std()-Z
-- tBodyAccJerkMag-mean()
-- tBodyAccJerkMag-std()
-- tBodyAccMag-mean()
-- tBodyAccMag-std()
-- tBodyGyro-mean()-X
-- tBodyGyro-mean()-Y
-- tBodyGyro-mean()-Z
-- tBodyGyro-std()-X
-- tBodyGyro-std()-Y 
-- tBodyGyro-std()-Z
-- tBodyGyroJerk-mean()-X
-- tBodyGyroJerk-mean()-Y
-- tBodyGyroJerk-mean()-Z
-- tBodyGyroJerk-std()-X
-- tBodyGyroJerk-std()-Y
-- tBodyGyroJerk-std()-Z
-- tBodyGyroJerkMag-mean()
-- tBodyGyroJerkMag-std()
-- tBodyGyroMag-mean()
-- tBodyGyroMag-std()
-- tGravityAcc-mean()-X
-- tGravityAcc-mean()-Y
-- tGravityAcc-mean()-Z
-- tGravityAcc-std()-X
-- tGravityAcc-std()-Y
-- tGravityAcc-std()-Z
-- tGravityAccMag-mean()
-- tGravityAccMag-std()
-
-### mean
-
-Mean of measurement values.
+- tBodyAccMeanX
+- tBodyAccMeanY
+- tBodyAccMeanZ
+- tBodyAccStdX
+- tBodyAccStdY
+- tBodyAccStdZ
+- tGravityAccMeanX
+- tGravityAccMeanY
+- tGravityAccMeanZ
+- tGravityAccStdX
+- tGravityAccStdY
+- tGravityAccStdZ
+- tBodyAccJerkMeanX
+- tBodyAccJerkMeanY
+- tBodyAccJerkMeanZ
+- tBodyAccJerkStdX
+- tBodyAccJerkStdY
+- tBodyAccJerkStdZ
+- tBodyGyroMeanX
+- tBodyGyroMeanY
+- tBodyGyroMeanZ
+- tBodyGyroStdX
+- tBodyGyroStdY
+- tBodyGyroStdZ
+- tBodyGyroJerkMeanX
+- tBodyGyroJerkMeanY
+- tBodyGyroJerkMeanZ
+- tBodyGyroJerkStdX
+- tBodyGyroJerkStdY
+- tBodyGyroJerkStdZ
+- tBodyAccMagMean
+- tBodyAccMagStd
+- tGravityAccMagMean
+- tGravityAccMagStd
+- tBodyAccJerkMagMean
+- tBodyAccJerkMagStd
+- tBodyGyroMagMean
+- tBodyGyroMagStd
+- tBodyGyroJerkMagMean
+- tBodyGyroJerkMagStd
+- fBodyAccMeanX
+- fBodyAccMeanY
+- fBodyAccMeanZ
+- fBodyAccStdX
+- fBodyAccStdY
+- fBodyAccStdZ
+- fBodyAccMeanFreqX
+- fBodyAccMeanFreqY
+- fBodyAccMeanFreqZ
+- fBodyAccJerkMeanX
+- fBodyAccJerkMeanY
+- fBodyAccJerkMeanZ
+- fBodyAccJerkStdX
+- fBodyAccJerkStdY
+- fBodyAccJerkStdZ
+- fBodyAccJerkMeanFreqX
+- fBodyAccJerkMeanFreqY
+- fBodyAccJerkMeanFreqZ
+- fBodyGyroMeanX
+- fBodyGyroMeanY
+- fBodyGyroMeanZ
+- fBodyGyroStdX
+- fBodyGyroStdY
+- fBodyGyroStdZ
+- fBodyGyroMeanFreqX
+- fBodyGyroMeanFreqY
+- fBodyGyroMeanFreqZ
+- fBodyAccMagMean
+- fBodyAccMagStd
+- fBodyAccMagMeanFreq
+- fBodyBodyAccJerkMagMean
+- fBodyBodyAccJerkMagStd
+- fBodyBodyAccJerkMagMeanFreq
+- fBodyBodyGyroMagMean
+- fBodyBodyGyroMagStd
+- fBodyBodyGyroMagMeanFreq
+- fBodyBodyGyroJerkMagMean
+- fBodyBodyGyroJerkMagStd
+- fBodyBodyGyroJerkMagMeanFreq
+- angletBodyAccMeangravity
+- angletBodyAccJerkMeangravityMean
+- angletBodyGyroMeangravityMean
+- angletBodyGyroJerkMeangravityMean
+- angleXgravityMean
+- angleYgravityMean
+- angleZgravityMean
