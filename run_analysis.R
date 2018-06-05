@@ -50,8 +50,15 @@ rm(train.data, test.data,
 # 2. Label Data Set with Descriptive Variable Names
 # -------------------------------------------------------------------------
 
+# Get variable names
+
 feature.names <- read.table("Data/UCI HAR Dataset/features.txt")
 var.names <- c("subject.id", "activity", as.vector(feature.names$V2))
+
+# Clean variable names
+
+var.names <- gsub("-mean\\(\\)-", "Mean", var.names)
+var.names <- gsub("-std\\(\\)-",  "Std",  var.names)
 
 names(data) <- var.names
 
@@ -61,7 +68,7 @@ names(data) <- var.names
 
 # Select mean or standard deviation measurements
 
-var.keep <- var.names[c(1, 2, grep("mean()|std()", var.names))]
+var.keep <- var.names[c(1, 2, grep("Mean|mean|Std|std", var.names))]
 
 # Subset mean and standard deviation variables
 
@@ -86,9 +93,7 @@ for (i in 1:nrow(data.mean.std)) {
 # -------------------------------------------------------------------------
 
 data.tidy <- group_by(data.mean.std, subject.id, activity) %>%
-  summarise_all(funs(mean)) %>%
-  gather(measurement, mean, -activity, -subject.id) %>%
-  arrange(subject.id, activity, measurement)
+  summarise_all(funs(mean))
 
 write.table(data.tidy, "tidy_data.txt", row.name=FALSE)
 
