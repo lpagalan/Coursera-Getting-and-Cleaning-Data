@@ -39,13 +39,6 @@ test.data  <- cbind(test.sub,  test.y,  test.x)
 
 data <- rbind(train.data, test.data)
 
-# Remove individual datasets
-
-rm(train.data, test.data,
-   train.x,    test.x,
-   train.y,    test.y,
-   train.sub,  test.sub)
-
 # -------------------------------------------------------------------------
 # 2. Label Data Set with Descriptive Variable Names
 # -------------------------------------------------------------------------
@@ -57,8 +50,9 @@ var.names <- c("subject.id", "activity", as.vector(feature.names$V2))
 
 # Clean variable names
 
-var.names <- gsub("-mean\\(\\)-", "Mean", var.names)
-var.names <- gsub("-std\\(\\)-",  "Std",  var.names)
+var.names <- gsub("-|\\(\\)|\\(|\\)|,", "", var.names)
+var.names <- gsub("mean", "Mean", var.names)
+var.names <- gsub("std", "Std", var.names)
 
 names(data) <- var.names
 
@@ -68,7 +62,7 @@ names(data) <- var.names
 
 # Select mean or standard deviation measurements
 
-var.keep <- var.names[c(1, 2, grep("Mean|mean|Std|std", var.names))]
+var.keep <- var.names[c(1, 2, grep("Mean|Std", var.names))]
 
 # Subset mean and standard deviation variables
 
